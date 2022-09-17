@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        iframe {
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+        header {
+            position: fixed;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            right: 15px;
+            top: 15px;
+            background: #fff;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+        }
+
+        header .logo {
+            color: #192a56;
+            font-size: 2.5rem;
+            font-weight: bolder;
+        }
+
+        header .logo i {
+            color: #666;
+        }
+
+
+        header .navbar a {
+            font-size: 1rem;
+            border-radius: .5rem;
+            padding: .5rem 1rem;
+            color: #192a56;
+            text-decoration: none;
+        }
+
+        header .navbar a.active,
+        header .navbar a:hover {
+            color: #fff;
+            background: #27ae60;
+        }
+
+        header .icons i,
+        header .icons a {
+            cursor: pointer;
+            margin-left: .5rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            width: 4.5rem;
+            text-align: center;
+            font-size: 1.7rem;
+            color: #192a56;
+            border-radius: 50%;
+            background: #eee;
+        }
+
+        header .icons i:hover,
+        header .icons a:hover {
+            color: #fff;
+            background: #27ae60;
+            transform: rotate(360deg);
+        }
+
+        header .icons #menu-bars {
+            display: none;
+        }
+
+        header .icons #menu-bars {
+            display: inline-block;
+        }
+
+        header .navbar {
+            position: absolute;
+            width: 25vw;
+            top: 100%;
+            right: 0;
+            background: #fff;
+            border: 1px solid #27ae60;
+            padding: 1rem;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        @media(max-width: 768px) {
+            header .navbar {
+                width: 100vw;
+            }
+        }
+
+        header .navbar.active {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        header .navbar a {
+            display: block;
+            margin: 1rem;
+            font-size: 2rem;
+            background: #eee;
+        }
+
+        #menu-bars {
+            color: #27ae60;
+            font-size: 2rem;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar" style="padding: 0;">
+            <a href="#Authorization">Authorization</a>
+            <a href="#Sidebar">Sidebar</a>
+            <a href="#Contact">Contact</a>
+            <a href="#Footer">Footer</a>
+            <a href="#review">review</a>
+            <a href="#order">order</a>
+        </nav>
+
+        <i class="fas fa-bars" id="menu-bars"></i>
+    </header>
+
+
+    <div class="box" id="Authorization">
+        <iframe src="./Authorization/auth-1/index.html" frameborder="0"></iframe>
+        <iframe src="./Authorization/auth-2/index.html" frameborder="0"></iframe>
+        <iframe src="./Authorization/auth-3/index.html" frameborder="0"></iframe>
+        <iframe src="./Authorization/auth-4/index.html" frameborder="0"></iframe>
+        <iframe src="./Authorization/auth-5/index.html" frameborder="0"></iframe>
+        <iframe src="./Authorization/auth-6/index.html" frameborder="0"></iframe>
+        <iframe src="./Authorization/auth-7/index.html" frameborder="0"></iframe>
+        <iframe src="./Authorization/auth-8/index.html" frameborder="0"></iframe>
+        <iframe src="./Authorization/auth-9/index.html" frameborder="0"></iframe>
+        <iframe src="./Authorization/auth-10/index.html" frameborder="0"></iframe>
+    </div>
+
+    <div class="box" id="Sidebar">
+        <iframe src="./Sidebar/sidebar-1/index.html" frameborder="0"></iframe>
+        <iframe src="./Sidebar/sidebar-2/index.html" frameborder="0"></iframe>
+        <iframe src="./Sidebar/sidebar-3/index.html" frameborder="0"></iframe>
+        <iframe src="./Sidebar/sidebar-4/index.html" frameborder="0"></iframe>
+        <iframe src="./Sidebar/sidebar-5/index.html" frameborder="0"></iframe>
+        <iframe src="./Sidebar/sidebar-6/index.html" frameborder="0"></iframe>
+    </div>
+
+    <div class="box" id="Contact">
+        <iframe src="./Contact/contact-1/index.html" frameborder="0"></iframe>
+        <iframe src="./Contact/contact-2/index.html" frameborder="0"></iframe>
+        <iframe src="./Contact/contact-3/index.html" frameborder="0"></iframe>
+        <iframe src="./Contact/contact-4/index.html" frameborder="0"></iframe>
+        <iframe src="./Contact/contact-5/index.html" frameborder="0"></iframe>
+        <iframe src="./Contact/contact-6/index.html" frameborder="0"></iframe>
+    </div>
+
+    <div class="box" id="Footer">
+        <iframe src="./Footer/footer-1/index.html" frameborder="0"></iframe>
+        <iframe src="./Footer/footer-2/index.html" frameborder="0"></iframe>
+        <iframe src="./Footer/footer-3/index.html" frameborder="0"></iframe>
+        <iframe src="./Footer/footer-4/index.html" frameborder="0"></iframe>
+        <iframe src="./Footer/footer-5/index.html" frameborder="0"></iframe>
+        <iframe src="./Footer/footer-6/index.html" frameborder="0"></iframe>
+        <iframe src="./Footer/footer-7/index.html" frameborder="0"></iframe>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        let menu = document.querySelector('#menu-bars');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            navbar.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

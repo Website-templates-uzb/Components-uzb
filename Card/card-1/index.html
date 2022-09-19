@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+        :root {
+            --yellow: #f9d806;
+            --light-yellow: #ffee80;
+            --black: #130f40;
+            --light-color: #666;
+            --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+            --border: .1rem solid rgba(0, 0, 0, .1);
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: .2s linear;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-padding-top: 7rem;
+            scroll-behavior: smooth;
+        }
+
+        section {
+            padding: 2rem 9%;
+        }
+
+        .heading {
+            padding-bottom: 2rem;
+            text-align: center;
+            font-size: 4.5rem;
+            color: var(--black);
+        }
+
+        .heading span {
+            position: relative;
+            z-index: 0;
+        }
+
+        .heading span::before {
+            content: '';
+            position: absolute;
+            bottom: 1rem;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: var(--light-yellow);
+            z-index: -1;
+            clip-path: polygon(0 90%, 100% 80%, 100% 100%, 0% 100%);
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: .8rem 3rem;
+            background: var(--light-yellow);
+            color: var(--black);
+            cursor: pointer;
+            font-size: 1.7rem;
+            border-radius: .5rem;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--yellow);
+        }
+
+        .services {
+            padding-top: 10rem;
+        }
+
+        .services .box-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+            gap: 1.5rem;
+        }
+
+        .services .box-container .box {
+            padding: 2rem;
+            border-radius: .5rem;
+            box-shadow: var(--box-shadow);
+            border: var(--border);
+            text-align: center;
+        }
+
+        .services .box-container .box i {
+            height: 6rem;
+            width: 6rem;
+            line-height: 6rem;
+            border-radius: 50%;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--yellow);
+            color: var(--black);
+        }
+
+        .services .box-container .box h3 {
+            font-size: 2.2rem;
+            color: var(--black);
+        }
+
+        .services .box-container .box p {
+            line-height: 1.8;
+            padding: 1rem 0;
+            font-size: 1.4rem;
+            color: var(--light-color);
+        }
+
+        .services .box-container .box:hover {
+            background: var(--black);
+        }
+
+        .services .box-container .box:hover h3 {
+            color: #fff;
+        }
+
+        .services .box-container .box:hover p {
+            color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="services" id="services">
+
+        <h1 class="heading"> our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-car"></i>
+                <h3>car selling</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente facilis aperiam asperiores eveniet
+                    expedita veritatis cupiditate nam similique nihil labore in quas, eos praesentium? Repellat!</p>
+                <a href="#" class="btn"> read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-tools"></i>
+                <h3>parts repair</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente facilis aperiam asperiores eveniet
+                    expedita veritatis cupiditate nam similique nihil labore in quas, eos praesentium? Repellat!</p>
+                <a href="#" class="btn"> read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-car-crash"></i>
+                <h3>car insurance</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente facilis aperiam asperiores eveniet
+                    expedita veritatis cupiditate nam similique nihil labore in quas, eos praesentium? Repellat!</p>
+                <a href="#" class="btn"> read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-car-battery"></i>
+                <h3>battery replacement</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente facilis aperiam asperiores eveniet
+                    expedita veritatis cupiditate nam similique nihil labore in quas, eos praesentium? Repellat!</p>
+                <a href="#" class="btn"> read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-gas-pump"></i>
+                <h3>oil change</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente facilis aperiam asperiores eveniet
+                    expedita veritatis cupiditate nam similique nihil labore in quas, eos praesentium? Repellat!</p>
+                <a href="#" class="btn"> read more</a>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 support</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente facilis aperiam asperiores eveniet
+                    expedita veritatis cupiditate nam similique nihil labore in quas, eos praesentium? Repellat!</p>
+                <a href="#" class="btn"> read more</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel-1</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #fff;
+      }
+
+      .bg-primary,
+      .bg-secondary {
+        background-color: #2a4d85 !important;
+      }
+
+      /* CSS */
+
+      .slider {
+        height: 250px;
+        margin: auto;
+        position: relative;
+        width: 90%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+
+      .slide-track {
+        display: flex;
+        width: calc(250px * 18);
+        animation: scroll 40s linear infinite;
+      }
+
+      .slide-track:hover {
+        animation-play-state: paused;
+      }
+
+      .slide-track a {
+        text-decoration: none;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(calc(-250px * 9));
+        }
+      }
+
+      .slide {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 150px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        perspective: 100px;
+        margin-right: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 5px;
+      }
+
+      .slide img {
+        width: 50%;
+        height: auto;
+        transition: transform 1s;
+        margin-bottom: 15px;
+      }
+
+      .slide span {
+        font-size: 14px;
+      }
+
+      .slide img:hover {
+        transform: translateZ(10px);
+      }
+
+      .slider::before,
+      .slider::after {
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        content: "";
+        height: 100%;
+        position: absolute;
+        width: 15%;
+        z-index: 2;
+      }
+
+      .slider::before {
+        left: 0;
+        top: 0;
+      }
+
+      .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="slider">
+      <div class="slide-track">
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Yagona identifikatsiya Tizimi</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Yagona interaktiv davlat xizmatlari portali</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Uzbekenergo DAK</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>O'zbekiston Respublikasida elektron litsenziyalash</span>
+        </a>
+        <a href="#" class="slide">
+          <img
+            src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png"
+            alt=""
+          />
+          <span>O'zbekiston Respublikasi ochiq ma'lumotlar portali</span>
+        </a>
+
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>O'zbekiston Respublikasi davlat dasturi portali</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>O'zbekiston Respublikasi voqealar va tadbirlar portali</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Deklarantlar portali</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>O'zbekiston Respublikasi Konstitutsiyasi</span>
+        </a>
+
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Soliq va moliyaviy hisobotlarni taqdim etish</span>
+        </a>
+
+        <!-- 9 SLIDES DOUBLED -->
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Yagona identifikatsiya Tizimi</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Yagona interaktiv davlat xizmatlari portali</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Uzbekenergo DAK</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>O'zbekiston Respublikasida elektron litsenziyalash</span>
+        </a>
+        <a href="#" class="slide">
+          <img
+            src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png"
+            alt=""
+          />
+          <span>O'zbekiston Respublikasi ochiq ma'lumotlar portali</span>
+        </a>
+
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>O'zbekiston Respublikasi davlat dasturi portali</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>O'zbekiston Respublikasi voqealar va tadbirlar portali</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Deklarantlar portali</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>O'zbekiston Respublikasi Konstitutsiyasi</span>
+        </a>
+        <a href="#" class="slide">
+          <img src="https://tdi.uz/uploads/icons/useful%20links/4b1e902e3af96c82dc5b7d4fe2208a21.png" alt="" />
+          <span>Soliq va moliyaviy hisobotlarni taqdim etish</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
